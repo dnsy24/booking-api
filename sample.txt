@@ -1,0 +1,72 @@
+private final List<Map<String, Object>> bookingList = new ArrayList<>() {{
+//        add(new LinkedHashMap<>() {{
+//            put("booking_id", 1);
+//            put("name", "Alexander");
+//            put("lastname", "Pushkin");
+//            put("price", 599);
+//            put("paid", true);
+//            put("city", "Saint-Petersburg");
+//            put("booking_dates", new BookingDates());
+//            put("additional_needs", "Breakfast");
+//        }});
+//        add(new LinkedHashMap<>() {{
+//            put("booking_id", 2);
+//            put("name", "Yuri");
+//            put("lastname", "Lermontov");
+//            put("price", 499);
+//            put("paid", false);
+//            put("city", "Novgorod");
+//            put("booking_dates", new BookingDates());
+//            put("additional_needs", "Not ordered");
+//        }});
+//        add(new LinkedHashMap<>() {{
+//            put("booking_id", 3);
+//            put("name", "Lev");
+//            put("lastname", "Tolstoy");
+//            put("price", 699);
+//            put("paid", true);
+//            put("city", "Moscow");
+//            put("booking_dates", new BookingDates());
+//            put("additional_needs", "Breakfast");
+//        }});
+//    }};
+
+@Override
+//    public List<Map<String, Object>> getBookingList() {
+//
+//        return new ArrayList<>() {{
+//            add(new LinkedHashMap<>() {{
+//                put("booking_id", ++id);
+//                put("name", "Alexander");
+//                put("lastname", "Pushkin");
+//                put("price", 599);
+//                put("paid", true);
+//                put("city", "Saint-Petersburg");
+//                put("languages", new String[]{"English", "German", "French"});
+//                put("booking_dates", new BookingDates());
+//                put("additional_needs", "Breakfast");
+//            }});
+//            add(new LinkedHashMap<>() {{
+//                put("booking_id", ++id);
+//                put("name", "Yuri");
+//                put("lastname", "Lermontov");
+//                put("price", 499);
+//                put("paid", false);
+//                put("city", "Novgorod");
+//                put("languages", new String[]{"English", "German", "French"});
+//                put("booking_dates", new BookingDates());
+//                put("additional_needs", "Not ordered");
+//            }});
+//            add(new LinkedHashMap<>() {{
+//                put("booking_id", ++id);
+//                put("name", "Lev");
+//                put("lastname", "Tolstoy");
+//                put("price", 699);
+//                put("paid", true);
+//                put("city", "Moscow");
+//                put("languages", new String[]{"English", "German", "French"});
+//                put("booking_dates", new BookingDates());
+//                put("additional_needs", "Breakfast");
+//            }});
+//        }};
+//    }

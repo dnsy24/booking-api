@@ -1,0 +1,13 @@
+{
+  "booking_id": 1,
+  "name": "Alexander",
+  "lastname": "Pushkin",
+  "paid": true,
+  "price": 599,
+  "city": "Saint-Petersburg",
+  "booking_dates": {
+    "checkIn": "2020-12-09",
+    "checkOut": "2020-12-19"
+  },
+  "additional_needs": "Breakfast"
+}
