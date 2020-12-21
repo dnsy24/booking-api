@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping("v2/booking")
+@RequestMapping("v1/api/booking")
 public class BookingController {
 
     DataStorageImpl dataStorage = new DataStorageImpl();

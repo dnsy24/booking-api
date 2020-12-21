@@ -1,18 +1,22 @@
 package com.example.bookingapi.data.provider;
 
 import com.github.javafaker.Faker;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
+
+import static com.example.bookingapi.data.provider.Languages.*;
 
 @Component
 public class DataProviderImpl implements DataProvider {
 
-//    @Autowired
-//    private Faker faker;
     private final Faker faker = new Faker();
 
     private static DataProviderImpl instance;
+
+    private final List<String> languages = Arrays.asList(ENGLISH.getLanguage(), GERMAN.getLanguage(), FRENCH.getLanguage());
 
     @Override
     public String createName() {
@@ -41,7 +45,7 @@ public class DataProviderImpl implements DataProvider {
 
     @Override
     public List<String> createLanguages() {
-        return List.of("English", "German", "French");
+        return languages;
     }
 
     @Override
