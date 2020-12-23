@@ -1,12 +1,13 @@
 package com.example.bookingapi.data.provider;
 
 import com.github.javafaker.Faker;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
+import static com.example.bookingapi.data.provider.AdditionalNeeds.BREAKFAST;
+import static com.example.bookingapi.data.provider.AdditionalNeeds.NON_APPLICABLE;
 import static com.example.bookingapi.data.provider.Languages.*;
 
 @Component
@@ -50,7 +51,7 @@ public class DataProviderImpl implements DataProvider {
 
     @Override
     public String createAdditionalNeeds() {
-        return Math.random() < 0.5 ? "Breakfast" : "n/a";
+        return Math.random() < 0.6 ? BREAKFAST.getAdditionalNeeds() : NON_APPLICABLE.getAdditionalNeeds();
     }
 
     public static DataProviderImpl booking() {

@@ -23,7 +23,7 @@ public class BookingController {
     }
 
     @GetMapping("{id}")
-    public Map<String, Object> bookingById(@PathVariable int id) {
+    public Map<String, Object> bookingById(@PathVariable long id) {
         return getBookingById(id);
     }
 
@@ -37,7 +37,7 @@ public class BookingController {
     }
 
     @PutMapping("{id}")
-    public Map<String, Object> updateBooking(@PathVariable int id, @RequestBody Map<String, String> booking) {
+    public Map<String, Object> updateBooking(@PathVariable long id, @RequestBody Map<String, String> booking) {
         Map<String, Object> bookingFromDataStorage = getBookingById(id);
         bookingFromDataStorage.putAll(booking);
         bookingFromDataStorage.put("booking_id", id);
@@ -45,7 +45,7 @@ public class BookingController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable int id) {
+    public void delete(@PathVariable long id) {
         if (bookingList.isEmpty()) {
             bookingList = dataStorage.getBookingList();
         } else {
@@ -55,9 +55,7 @@ public class BookingController {
 
     }
 
-
-    private Map<String, Object> getBookingById(int id) {
-
+    private Map<String, Object> getBookingById(long id) {
         return bookingList.stream()
                 .filter(booking -> booking.get("booking_id").equals(id))
                 .findFirst()
